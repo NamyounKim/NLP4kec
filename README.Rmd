@@ -9,7 +9,7 @@ install_local("해당 repo를 clone한 경로")
 ```
 
 2. 사용법
-```{r, echo=TRUE}
+```{r output, echo=TRUE}
 library(NLP4kec)
 result = text_parser(path = "/Users/kimnamyoun/sample.xlsx", language = "ko")
 head(result)
