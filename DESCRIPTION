@@ -4,8 +4,7 @@ Title: What the Package Does (Title Case)
 Version: 1.0.0
 Author: Namyoun
 Maintainer: Namyoun <namyun84@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: NLP for Korean, English, Chinese
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
