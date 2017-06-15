@@ -5,8 +5,8 @@
 1. 패키지 다운로드
   형태소 분석기 패키지 다운 받을 수 있는 링크
 
-  • Linux/Mac 용 : https://drive.google.com/open?id=0B17gOOWaz2YRVTlyaWpPejJhbmM
-  • Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
+  - Linux/Mac 용 : https://drive.google.com/open?id=0B17gOOWaz2YRVTlyaWpPejJhbmM
+  - Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
 
 
 2. 설치 방법
