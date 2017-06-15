@@ -2,13 +2,20 @@
 
 한글, 영어, 중국어 텍스트 데이터를 형태소 분석 후 R tm package에서 사용할 수 있도록 해주는 패키지 
 
-1. 설치 방법
+1. 패키지 다운로드
+형태소 분석기 패키지 다운 받을 수 있는 링크
+
+• Linux/Mac 용 : https://drive.google.com/open?id=0B17gOOWaz2YRVTlyaWpPejJhbmM
+• Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
+
+
+2. 설치 방법
 ```{bash}
 library(devtools)
 install_local("해당 repo를 clone한 경로")
 ```
 
-2. 사용법
+3. 사용법
 ```{r output, echo=TRUE}
 library(NLP4kec)
 result = text_parser(path = "/Users/kimnamyoun/sample.xlsx", language = "ko")
