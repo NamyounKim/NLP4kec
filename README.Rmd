@@ -1,6 +1,9 @@
 ## NLP4kec
 
-한글, 영어, 중국어 텍스트 데이터를 형태소 분석 후 R tm package에서 사용할 수 있도록 해주는 패키지 
+한글, 영어, 중국어 텍스트 데이터 파일을 입력받아 형태소 분석 후 R tm package에서 사용할 수 있도록 해주는 패키지
+ - 한글은 은전한닢 형태소 분석기를 사용
+ - 영어, 중국어는 Stanford core NLP 사용
+
 
 1. 패키지 다운로드
   
@@ -18,10 +21,37 @@ install_local("해당 repo를 clone한 경로")
 
 
 3. 사용법
+엑셀 또는 CSV로 정리된 텍스트 데이터의 경로와 몇가지 옵션을 입력받아 형태소 분석을 처리함.
+분석 대상 파일은 반드시 컬럼명이 id, content로 구성된 파일이어야함 (sample.xlsx 참조)
+ 
+ - 파일로 읽어서 파싱된 결과를 vector 형태로 가져오기
 ```{r output, echo=TRUE}
 library(NLP4kec)
 result = text_parser(path = "/Users/kimnamyoun/sample.xlsx", language = "ko")
 head(result)
 ```
 
+ - 파일로 읽어서 파싱된 결과를 csv형태로 저장하기
+```{r}
+result = text_parser_file(path = "/Users/kimnamyoun/sample.xlsx", language = "ko")
+```
+
+ - 사용자 사전 적용해서 형태소 분석하기
+```{r}
+result = text_parser(path = "/Users/kimnamyoun/sample.xlsx", language = "ko", korDicPath = "dictionary 파일 경로")
+```
+
+ - 한글에서 영어로된 단어도 같이 분석할 경우
+```{r}
+result = text_parser(path = "/Users/kimnamyoun/sample.xlsx", language = "ko", useEn = T)
+```
+
+ - 영어 또는 중국어 분석하기
+```{r}
+# 영어
+result = text_parser(path = "/Users/kimnamyoun/sample.xlsx", language = "en", korDicPath = "dictionary 파일 경로")
+
+# 중국어
+result = text_parser(path = "/Users/kimnamyoun/sample.xlsx", language = "zh", korDicPath = "dictionary 파일 경로")
+```
 
