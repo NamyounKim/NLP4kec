@@ -1,11 +1,11 @@
-## NLP4kec
+### NLP4kec ###
 
 한글, 영어, 중국어 텍스트 데이터 파일을 입력받아 형태소 분석 후 R tm package에서 사용할 수 있도록 해주는 패키지
  - 한글은 은전한닢 형태소 분석기를 사용
  - 영어, 중국어는 Stanford core NLP 사용
 
 
-1. 패키지 다운로드
+## 1. 패키지 다운로드
   
   형태소 분석기 패키지 다운 받을 수 있는 링크
 
@@ -13,14 +13,14 @@
   - Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
 
 
-2. 설치 방법
+## 2. 설치 방법
 ```{bash}
 library(devtools)
 install_local("해당 repo를 clone한 경로")
 ```
 
 
-3. 사용법
+## 3. 사용법
 엑셀 또는 CSV로 정리된 텍스트 데이터의 경로와 몇가지 옵션을 입력받아 형태소 분석을 처리함.
 분석 대상 파일은 반드시 컬럼명이 id, content로 구성된 파일이어야함 (sample.xlsx 참조)
  
