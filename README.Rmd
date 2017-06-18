@@ -13,8 +13,17 @@
   - Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
 
 
-## 2. 설치 방법
+## 2. 설치 방법 
+```{r}
+#위에서 다운 받으신 파일을 가지고 패키지 인스톨을 하시면 됩니다. (rJava패키지 사전에 인스톨 해야함)
+install.packages("다운받은 패키지 파일 경로", repos = NULL)
+# 예시) install.packages("C:/Users/user/Desktop/class/NLP4kec_1.0.0.zip" , repos=NULL)
+
+#아니면 Rstudio에서 제공하는 패키지 인스톨 기능을 사용하세요.
+```
+or
 ```{bash}
+#git에서 clone 하신 다음 설치도 가능
 library(devtools)
 install_local("해당 repo를 clone한 경로")
 ```
