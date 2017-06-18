@@ -55,7 +55,7 @@ result = text_parser(path = "./en_sample.xlsx", language = "en", korDicPath = "d
 result = text_parser(path = "./zh_sample.xlsx", language = "zh", korDicPath = "dictionary 파일 경로")
 ```
 
-## 4. tm패키지 사용 예시
+## 4. tm패키지와 함께 사용 예시
 ```{r}
 library(tm)
 library(NLP4kec)
