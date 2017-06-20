@@ -13,9 +13,9 @@
   - Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
 
 
-## 2. 설치 방법 
+## 2. 설치 방법
+위에서 다운 받으신 파일을 가지고 패키지 인스톨을 하시면 됩니다. (rJava패키지 사전에 인스톨 해야함)
 ```{r}
-#위에서 다운 받으신 파일을 가지고 패키지 인스톨을 하시면 됩니다. (rJava패키지 사전에 인스톨 해야함)
 install.packages("다운받은 패키지 파일 경로", repos = NULL)
 # 예시) install.packages("C:/Users/user/Desktop/class/NLP4kec_1.0.0.zip" , repos=NULL)
 
