@@ -40,29 +40,29 @@ library(NLP4kec)
 result = text_parser(path = "./sample.xlsx", language = "ko")
 head(result)
 ```
-
+<br>
  - 파일로 읽어서 파싱된 결과를 csv형태로 저장하기
 ```{r}
 result = text_parser_file(path = "./sample.xlsx", language = "ko")
 ```
-
+<br>
  - 사용자 사전 적용해서 형태소 분석하기
 ```{r}
 result = text_parser(path = "./sample.xlsx", language = "ko", korDicPath = "dictionary 파일 경로")
 ```
-
+<br>
  - 한글에서 영어로된 단어도 같이 분석할 경우
 ```{r}
 result = text_parser(path = "./sample.xlsx", language = "ko", useEn = T)
 ```
-
+<br>
  - 영어 또는 중국어 분석하기
 ```{r}
 # 영어
-result = text_parser(path = "./en_sample.xlsx", language = "en", korDicPath = "dictionary 파일 경로")
+result = text_parser(path = "./en_sample.xlsx", language = "en")
 
 # 중국어
-result = text_parser(path = "./zh_sample.xlsx", language = "zh", korDicPath = "dictionary 파일 경로")
+result = text_parser(path = "./zh_sample.xlsx", language = "zh")
 ```
 
 ## 4. tm패키지와 함께 사용 예시
