@@ -13,3 +13,4 @@ Depends:
     rJava (>= 0.9-0)
 Collate:
     'RTextParser.R'
+RoxygenNote: 6.0.1
