@@ -3,7 +3,7 @@
 .onLoad <- function(libname, pkgname){
   library(rJava)
 
-  initopt <- c("-Xmx3g", "-Dfile.encoding=UTF-8")
+  initopt <- c("-Xmx1g", "-Dfile.encoding=UTF-8")
   options(java.parameters = initopt)
 
   .jpackage(pkgname, lib.loc = libname)
