@@ -9,7 +9,7 @@
   
   형태소 분석기 패키지 다운 받을 수 있는 링크
 
-  - Linux/Mac 용 : https://drive.google.com/open?id=0B17gOOWaz2YRVTlyaWpPejJhbmM
+  - Linux/Mac 용 : https://goo.gl/84dE1S
   - Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
 
 
