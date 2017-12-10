@@ -34,35 +34,41 @@ install_local("해당 repo를 clone한 경로")
 엑셀 또는 CSV로 정리된 텍스트 데이터의 경로와 몇가지 옵션을 입력받아 형태소 분석을 처리함.
 분석 대상 파일은 반드시 컬럼명이 id, content로 구성된 파일이어야함 (sample.xlsx 참조)
  
- - 파일로 읽어서 파싱된 결과를 vector 형태로 가져오기
+ - 파일(xlsx, csv)로 텍스트를 읽어서 형태소 분석 후 결과를 vector 형태로 가져오기
 ```{r output, echo=TRUE}
 library(NLP4kec)
-result = text_parser(path = "./sample.xlsx", language = "ko")
-head(result)
+result = file_parser_r(path = "./sample.xlsx", language = "ko")
 ```
 
- - 파일로 읽어서 파싱된 결과를 csv형태로 저장하기
+- character vector를 형태소 분석하여 vector 형태로 가져오기
+```{r output, echo=TRUE}
+library(NLP4kec)
+test = "아버지가 가방에 들어가신다."
+r_parser_r(test, useEn = T, language = "ko",korDicPath = "./dictionary.txt")
+```
+
+ - 파일(xlsx, csv)로 텍스트를 읽어서 형태소 분석 후 결과를 csv형태로 저장하기
 ```{r}
-result = text_parser_file(path = "./sample.xlsx", language = "ko")
+result = file_parser_file(path = "./sample.xlsx", language = "ko")
 ```
 
  - 사용자 사전 적용해서 형태소 분석하기
 ```{r}
-result = text_parser(path = "./sample.xlsx", language = "ko", korDicPath = "dictionary 파일 경로")
+result = file_parser_r(path = "./sample.xlsx", language = "ko", korDicPath = "dictionary 파일 경로")
 ```
 
  - 한글에서 영어로된 단어도 같이 분석할 경우
 ```{r}
-result = text_parser(path = "./sample.xlsx", language = "ko", useEn = T)
+result = file_parser_r(path = "./sample.xlsx", language = "ko", useEn = T)
 ```
 
  - 영어 또는 중국어 분석하기
 ```{r}
 # 영어
-result = text_parser(path = "./en_sample.xlsx", language = "en")
+result = file_parser_r(path = "./en_sample.xlsx", language = "en")
 
 # 중국어
-result = text_parser(path = "./zh_sample.xlsx", language = "zh")
+result = file_parser_r(path = "./zh_sample.xlsx", language = "zh")
 ```
 
 ## 4. tm패키지와 함께 사용 예시
@@ -71,7 +77,7 @@ library(tm)
 library(NLP4kec)
 
 #형태소 분석기 실행하기
-parsedData = text_parser(path = "./sample.xlsx"
+parsedData = file_parser_r(path = "./sample.xlsx"
                          ,language = "ko"
                          ,korDicPath = "./dictionary.txt")
 
@@ -94,4 +100,3 @@ dtmW = dtmW[,nchar(colnames(dtmW)) > 1]
 #연관 키워드 구하기
 findAssocs(dtm, terms = "냉장고", corlimit = 0.2)
 ```
-
