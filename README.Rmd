@@ -9,8 +9,8 @@
   
   형태소 분석기 패키지 다운 받을 수 있는 링크
 
-  - Linux/Mac 용 : https://goo.gl/84dE1S
-  - Windows 용 : https://drive.google.com/open?id=0B17gOOWaz2YRaW5yTUhOV2QyYjQ
+  - Linux/Mac 용 : https://goo.gl/XzchY3
+  - Windows 용 : https://goo.gl/oGco1b
 
 
 ## 2. 설치 방법
@@ -43,8 +43,8 @@ result = file_parser_r(path = "./sample.xlsx", language = "ko")
 - character vector를 형태소 분석하여 vector 형태로 가져오기
 ```{r output, echo=TRUE}
 library(NLP4kec)
-test = "아버지가 가방에 들어가신다."
-r_parser_r(test, useEn = T, language = "ko",korDicPath = "./dictionary.txt")
+sample_sentence = "카레닌에게 잠에서 깨어나는 순간은 순수한 행복이었다."
+r_parser_r(sample_sentence, language = "ko")
 ```
 
  - 파일(xlsx, csv)로 텍스트를 읽어서 형태소 분석 후 결과를 csv형태로 저장하기
@@ -81,8 +81,8 @@ parsedData = file_parser_r(path = "./sample.xlsx"
                          ,language = "ko"
                          ,korDicPath = "./dictionary.txt")
 
-#단어간 스페이스 하나 더 추가하기 (윈도우에서 돌리는 경우에만 적용)
-parsedData = gsub(" ","  ",parsedData)
+#단어간 스페이스 하나 더 추가하기 
+parsedData = gsub(" ","  ",parsedData) #(윈도우에서 돌리는 경우에만 적용)
 
 #Corpus 생성
 corp = VCorpus(VectorSource(parsedData))
@@ -93,8 +93,8 @@ corp = tm_map(corp, removePunctuation)
 #Document Term Matrix 생성
 dtm = DocumentTermMatrix(corp, control=list(removeNumbers=FALSE, wordLengths=c(2,Inf)))
 
-#단어 양옆 스페이스 제거 및 한글자 단어 제외하기 (윈도우에서 돌리는 경우에만 적용)
-colnames(dtmW) = trimws(colnames(dtmW))
+#단어 양옆 스페이스 제거 및 한글자 단어 제외하기
+colnames(dtmW) = trimws(colnames(dtmW))  #(윈도우에서 돌리는 경우에만 적용)
 dtmW = dtmW[,nchar(colnames(dtmW)) > 1]
 
 #연관 키워드 구하기
