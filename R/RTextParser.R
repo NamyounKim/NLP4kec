@@ -73,5 +73,16 @@ extract_noun <- function(path, useEn = F, language, korDicPath = "noDic"){
   }
 }
 
+r_extract_noun <- function(contentVector, useEn = F, language, korDicPath = "noDic"){
+  obj = .jnew("com.namyun.pos.Starter")
+  props_path = file.path(system.file(package = "NLP4kec"),"java")
 
+  if(language == "zh"){
+    return(.jcall(obj, "[Ljava/lang/String;", "rExtractNounFromRToR"
+                  , .jarray(contentVector), as.character(useEn), as.character(language), paste0(props_path,"/StanfordCoreNLP-chinese.properties"), "NULL"))
+  }else{
+    return(.jcall(obj, "[Ljava/lang/String;", "rExtractNounFromRToR"
+                  ,.jarray(contentVector), as.character(useEn), as.character(language), "NULL", as.character(korDicPath)))
+  }
+}
 
