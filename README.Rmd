@@ -9,8 +9,8 @@
   
   형태소 분석기 패키지 다운 받을 수 있는 링크
 
-  - Linux/Mac 용 : https://goo.gl/XzchY3
-  - Windows 용 : https://goo.gl/oGco1b
+  - Linux/Mac 용 : http://bit.ly/NLP4kec_tgz
+  - Windows 용 : http://bit.ly/NLP4kec_zip
 
 
 ## 2. 설치 방법
@@ -18,7 +18,7 @@
 <br><br> 직접설치
 ```{r}
 install.packages("다운받은 패키지 파일 경로", repos = NULL)
-# 예시) install.packages("C:/Users/user/Desktop/class/NLP4kec_1.0.0.zip" , repos=NULL)
+# 예시) install.packages("C:/Users/user/Desktop/class/NLP4kec_1.2.0.zip" , repos=NULL)
 
 #또는 Rstudio에서 제공하는 패키지 인스톨 기능을 사용하세요.
 ```
