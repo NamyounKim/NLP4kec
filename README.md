@@ -40,14 +40,13 @@ library(NLP4kec)
 result = file_parser_r(path = "./sample.xlsx", language = "ko")
 ```
 <br>
-- character vector를 형태소 분석하여 vector 형태로 가져오기
-
+ - character vector를 형태소 분석하여 vector 형태로 가져오기
 ```
 library(NLP4kec)
 sample_sentence = "카레닌에게 잠에서 깨어나는 순간은 순수한 행복이었다."
 r_parser_r(sample_sentence, language = "ko")
 ```
-
+<br>
  - 파일(xlsx, csv)로 텍스트를 읽어서 형태소 분석 후 결과를 csv형태로 저장하기
 ```
 result = file_parser_file(path = "./sample.xlsx", language = "ko")
@@ -57,12 +56,12 @@ result = file_parser_file(path = "./sample.xlsx", language = "ko")
 ```
 result = file_parser_r(path = "./sample.xlsx", language = "ko", korDicPath = "dictionary 파일 경로")
 ```
-
+<br>
  - 한글에서 영어로된 단어도 같이 분석할 경우
 ```
 result = file_parser_r(path = "./sample.xlsx", language = "ko", useEn = T)
 ```
-
+<br>
  - 영어 또는 중국어 분석하기
 ```
 # 영어
