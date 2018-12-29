@@ -16,14 +16,14 @@
 ## 2. 설치 방법
 위에서 다운 받으신 파일을 가지고 패키지 인스톨을 하시면 됩니다. <br>(rJava패키지 사전에 인스톨 해야함 / JRE 1.8 이상이 요구됨)
 <br><br> 직접설치
-```{r}
+```{rcpp}
 install.packages("다운받은 패키지 파일 경로", repos = NULL)
 # 예시) install.packages("C:/Users/user/Desktop/class/NLP4kec_1.2.0.zip" , repos=NULL)
 
 #또는 Rstudio에서 제공하는 패키지 인스톨 기능을 사용하세요.
 ```
 or git clone 후 설치
-```{bash}
+```{rcpp}
 #git에서 clone 하신 다음 설치도 가능
 library(devtools)
 install_local("해당 repo를 clone한 경로")
@@ -33,46 +33,47 @@ install_local("해당 repo를 clone한 경로")
 ## 3. 사용법
 엑셀 또는 CSV로 정리된 텍스트 데이터의 경로와 몇가지 옵션을 입력받아 형태소 분석을 처리함.
 분석 대상 파일은 반드시 컬럼명이 id, content로 구성된 파일이어야함 (sample.xlsx 참조)
- 
+<br><br>
  - 파일(xlsx, csv)로 텍스트를 읽어서 형태소 분석 후 결과를 vector 형태로 가져오기
-```{r output, echo=TRUE}
+```{rcpp}
 library(NLP4kec)
 result = file_parser_r(path = "./sample.xlsx", language = "ko")
 ```
-
+<br>
 - character vector를 형태소 분석하여 vector 형태로 가져오기
-```{r output, echo=TRUE}
+```{rcpp}
 library(NLP4kec)
 sample_sentence = "카레닌에게 잠에서 깨어나는 순간은 순수한 행복이었다."
 r_parser_r(sample_sentence, language = "ko")
 ```
-
+<br>
  - 파일(xlsx, csv)로 텍스트를 읽어서 형태소 분석 후 결과를 csv형태로 저장하기
-```{r}
+```{rcpp}
 result = file_parser_file(path = "./sample.xlsx", language = "ko")
 ```
-
+<br>
  - 사용자 사전 적용해서 형태소 분석하기
-```{r}
+```{rcpp}
 result = file_parser_r(path = "./sample.xlsx", language = "ko", korDicPath = "dictionary 파일 경로")
 ```
-
+<br>
  - 한글에서 영어로된 단어도 같이 분석할 경우
-```{r}
+```{rcpp}
 result = file_parser_r(path = "./sample.xlsx", language = "ko", useEn = T)
 ```
-
+<br>
  - 영어 또는 중국어 분석하기
-```{r}
+```{rcpp}
 # 영어
 result = file_parser_r(path = "./en_sample.xlsx", language = "en")
 
 # 중국어
 result = file_parser_r(path = "./zh_sample.xlsx", language = "zh")
 ```
+<br><br>
 
 ## 4. tm패키지와 함께 사용 예시
-```{r}
+```{rcpp}
 library(tm)
 library(NLP4kec)
 
