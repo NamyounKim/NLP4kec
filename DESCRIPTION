@@ -1,7 +1,7 @@
 Package: NLP4kec
 Type: Package
 Title: NLP for Korean, English, Chinese
-Version: 1.2.0
+Version: 1.3.0
 Author: Namyoun
 Maintainer: Namyoun <namyun84@gmail.com>
 Description: NLP for Korean, English, Chinese
@@ -13,4 +13,4 @@ Depends:
     rJava (>= 0.9-0)
 Collate:
     'RTextParser.R'
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

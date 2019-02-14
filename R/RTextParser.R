@@ -86,3 +86,18 @@ r_extract_noun <- function(contentVector, useEn = F, language, korDicPath = "noD
   }
 }
 
+
+synonym_processing <- function(parsedVector, synonymDic)
+{
+  # 동의어 처리
+  for (i in 1:nrow(synonymDic)){
+    targetDocIdx = which(ll <- grepl(synonymDic$originWord[i], parsedVector))
+    for(j in 1:length(targetDocIdx)){
+      docNum = targetDocIdx[j]
+      parsedVector[docNum] = gsub(synonymDic$originWord[i], synonymDic$changeWord[i], parsedVector[docNum])
+    }
+  }
+  
+  return(parsedVector)
+}
+
