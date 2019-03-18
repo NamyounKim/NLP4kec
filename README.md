@@ -9,8 +9,8 @@
   
   형태소 분석기 패키지 다운 받을 수 있는 링크
 
-  - Linux/Mac 용 : http://bit.ly/NLP4kec_tgz
-  - Windows 용 : http://bit.ly/NLP4kec_zip
+  - Linux/Mac 용 : http://bit.ly/NLP4kec_mac_1_3
+  - Windows 용 : http://bit.ly/NLP4kec_win_1_3
 
 
 ## 2. 설치 방법
@@ -45,6 +45,11 @@ result = file_parser_r(path = "./sample.xlsx", language = "ko")
 library(NLP4kec)
 sample_sentence = "카레닌에게 잠에서 깨어나는 순간은 순수한 행복이었다."
 r_parser_r(sample_sentence, language = "ko")
+```
+
+ - 형태소 분석 결과에서 동의어 처리하기
+```
+synonym_processing(parsedVector = parsedData, synonymDic = "동의어 사전 경로")
 ```
 
  - 파일(xlsx, csv)로 텍스트를 읽어서 형태소 분석 후 결과를 csv형태로 저장하기
