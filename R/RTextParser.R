@@ -2,7 +2,7 @@
 .onLoad <- function(libname, pkgname){
   library(rJava)
 
-  initopt <- c("-Xmx2g", "-Dfile.encoding=UTF-8")
+  initopt <- c("-Xmx4g", "-Dfile.encoding=UTF-8")
   options(java.parameters = initopt)
 
   .jpackage(pkgname, lib.loc = libname)
@@ -97,7 +97,7 @@ synonym_processing <- function(parsedVector, synonymDic)
       parsedVector[docNum] = gsub(synonymDic$originWord[i], synonymDic$changeWord[i], parsedVector[docNum])
     }
   }
-  
+
   return(parsedVector)
 }
 
