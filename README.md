@@ -3,14 +3,16 @@
 한글, 영어, 중국어 텍스트 데이터 파일을 입력받아 형태소 분석 후 R tm package에서 사용할 수 있도록 해주는 패키지
  - 한글은 은전한닢 형태소 분석기를 사용
  - 영어, 중국어는 Stanford core NLP 사용
-
+ 
 
 ## 1. 패키지 다운로드
   
+  R 4.0.0 버전에서 사용가능하도록 업데이트 되었습니다.
+  
   형태소 분석기 패키지 다운 받을 수 있는 링크
 
-  - Linux/Mac 용 : http://bit.ly/NLP4kec_mac_1_3
-  - Windows 용 : http://bit.ly/NLP4kec_win_1_3
+  - Linux/Mac 용 : http://bit.ly/NLP4kec_mac_1_4
+  - Windows 용 : http://bit.ly/NLP4kec_win_1_4
 
 
 ## 2. 설치 방법
